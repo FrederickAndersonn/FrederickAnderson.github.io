@@ -1,0 +1,201 @@
+/* Default styles for larger screens */
+
+section {
+    height: 100vh;
+}
+
+
+/* Add this class to elements that should be animated */
+
+.about__animated {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+
+/* Define an animation to fade in and slide up */
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.about__data {
+    padding: 1.875rem;
+    background-color: var(--container-color);
+    box-shadow: var(--shadow);
+    border-radius: var(--border-radius);
+}
+
+.about__description {
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+.about__description__short {
+    display: none;
+}
+
+.about__container {
+    grid-template-columns: 3fr 9fr;
+    column-gap: 1.875rem;
+}
+
+.about__img {
+    margin-top: 10px;
+}
+
+.about__data {
+    padding: 1.875rem;
+    background-color: var(--container-color);
+    box-shadow: var(--shadow);
+    border-radius: var(--border-radius);
+}
+
+.about__skills {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* Display 3 columns */
+    grid-column-gap: 1.875rem;
+    grid-row-gap: 1rem;
+    align-items: center;
+    /* Center vertically */
+    justify-content: center;
+    /* Center horizontally */
+}
+
+.about__data::before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 15px solid var(--container-color);
+    position: absolute;
+    left: -0.93rem;
+    top: 20%;
+}
+
+.about__description {
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+.skills__titles {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.skills__name {
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
+}
+
+.skills__number {
+    line-height: 1.2;
+}
+
+.skills__bar,
+.skills__percentage {
+    height: 7px;
+    border-radius: 0.25rem;
+}
+
+.skills__bar {
+    background-color: #f1f1f1;
+}
+
+.skills__percentage {
+    display: block;
+    background-color: var(--first-color);
+}
+
+.cpp {
+    width: 80%;
+    background-color: rgb(255, 209, 92);
+}
+
+.javascript {
+    width: 60%;
+    background-color: rgb(255, 209, 92);
+}
+
+.html {
+    width: 60%;
+    background-color: rgb(255, 209, 92);
+}
+
+.java {
+    width: 55%;
+    background-color: rgb(255, 209, 92);
+}
+
+.python {
+    width: 55%;
+    background-color: rgb(255, 209, 92);
+}
+
+.excel {
+    width: 55%;
+    background-color: rgb(255, 209, 92);
+}
+
+.sql {
+    width: 50%;
+    background-color: rgb(255, 209, 92);
+}
+
+.php {
+    width: 30%;
+    background-color: rgb(255, 209, 92);
+}
+
+.linux {
+    width: 30%;
+    background-color: rgb(255, 209, 92);
+}
+
+.react {
+    width: 40%;
+    background-color: rgb(255, 209, 92);
+}
+
+@media (max-width: 1024px) {
+    .about__container {
+        grid-template-columns: 1fr;
+        row-gap: 1.5rem;
+        text-align: center;
+    }
+    .about__img {
+        margin-top: 10px;
+        width: 100px;
+    }
+    .about__data {
+        padding: 0.8rem;
+    }
+    .about__skills {
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-column-gap: 1.875rem;
+        grid-row-gap: 1rem;
+        justify-content: center;
+        font-size: 1rem;
+    }
+    .about__description {
+        display: none;
+    }
+    .about__description__short {
+        display: block;
+        margin-bottom: 1rem;
+        text-align: justify;
+    }
+    .image__container {
+        justify-content: center;
+    }
+}
