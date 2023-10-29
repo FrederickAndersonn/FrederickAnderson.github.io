@@ -1,31 +1,18 @@
-import React, { useState } from 'react';
 import './contact.css';
-import axios from 'axios';
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: '',
-  });
+  const form = useRef();
 
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
-
-  const handleSubmit = (e) => {
+  const sendEmail = (e) => {
     e.preventDefault();
-    axios
-      .post('/send-email', formData)
-      .then((response) => {
-        console.log(response.data);
-        // Reset the form or show a success message to the user
-      })
-      .catch((error) => {
-        console.error(error);
-        // Handle the error or show an error message to the user
+
+    emailjs.sendForm('service_n0f6f6x', 'template_woz5ae3', form.current, 'i64_FC3tEvQj8HTAD')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
       });
   };
 
@@ -39,16 +26,14 @@ const Contact = () => {
           <p className="contact__details">Send me an email.</p>
         </div>
 
-        <form className="contact__form" onSubmit={handleSubmit}>
+        <form ref={form} className="contact__form" onSubmit={sendEmail}>
           <div className="contact__form-group">
             <div className="contact__form-div">
               <input
                 type="text"
                 className="contact__form-input"
                 placeholder="Insert your name / company"
-                name="name"
-                value={formData.name}
-                onChange={handleInputChange}
+                name="user_name"
               />
             </div>
 
@@ -57,9 +42,8 @@ const Contact = () => {
                 type="email"
                 className="contact__form-input"
                 placeholder="Insert your email"
-                name="email"
-                value={formData.email}
-                onChange={handleInputChange}
+                name="user_email"
+                
               />
             </div>
 
@@ -69,8 +53,7 @@ const Contact = () => {
                 className="contact__form-input"
                 placeholder="Insert your subject"
                 name="subject"
-                value={formData.subject}
-                onChange={handleInputChange}
+                
               />
             </div>
           </div>
@@ -82,11 +65,9 @@ const Contact = () => {
               rows="10"
               className="contact__form-input"
               placeholder="Write Your Message"
-              value={formData.message}
-              onChange={handleInputChange}
             ></textarea>
           </div>
-          <button type="submit" className="btn">
+          <button type="submit" className="btn" value="Send">
             Send Message
           </button>
         </form>
