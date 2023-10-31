@@ -42,7 +42,7 @@ const Contact = () => {
                 type="email"
                 className="contact__form-input"
                 placeholder="Insert your email"
-                name="user_email"
+                name="from_name"
                 
               />
             </div>
