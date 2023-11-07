@@ -36,3 +36,9 @@
     transform: rotate(-180deg);
     writing-mode: vertical-rl;
 }
+
+@media (max-width: 768px) {
+    .aside {
+        display: none;
+    }
+}

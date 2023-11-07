@@ -151,3 +151,9 @@
     bottom: 10%;
     right: 22%;
 }
+
+@media (max-width: 768px) {
+    .home__img {
+        width: 150px;
+    }
+}

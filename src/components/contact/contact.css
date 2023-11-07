@@ -48,3 +48,28 @@
 .message {
     height: 300px;
 }
+
+@media (max-width: 768px) {
+    .message {
+        height: 150px;
+    }
+    .contact__form-div {
+        margin-bottom: 1.375rem;
+        height: 2.75rem;
+    }
+    .contact__form-input {
+        font-size: 15px;
+    }
+    .contact__form-group {
+        display: flex;
+        flex-direction: column;
+        column-gap: 1.5rem;
+    }
+    .contact__container {
+        display: flex;
+        flex-direction: column;
+    }
+    .contact__details {
+        margin-bottom: 20px;
+    }
+}

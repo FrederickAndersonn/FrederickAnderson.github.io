@@ -99,3 +99,30 @@ section {
     opacity: 1;
     transform: translateY(0);
 }
+
+@media (max-width: 768px) {
+    .work__button {
+        bottom: 1rem;
+        left: 1rem;
+        font-size: var(--h5-font-size);
+        display: block;
+        background-color: #ffd15c;
+        height: 20px;
+        width: 20px;
+        cursor: pointer;
+        border: 50%;
+        text-align: center;
+        line-height: 22px;
+        transition: .3s;
+        opacity: 0;
+        border-radius: 100%;
+    }
+    .work__title {
+        color: #fff;
+        font-size: 10px;
+        margin: 0 0 0 0.98rem;
+        padding: 0 1.25rem;
+        top: 2.75rem;
+        transform: translateY(30px);
+    }
+}

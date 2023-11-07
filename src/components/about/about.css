@@ -200,3 +200,13 @@ section {
         justify-content: center;
     }
 }
+
+@media (max-width: 768px) {
+    .skills__percentage {
+        height: 3px;
+        border-radius: 0.25rem;
+    }
+    .skills__name {
+        font-size: 10px;
+    }
+}
