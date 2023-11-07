@@ -29,6 +29,15 @@
     --border-radius: 20px;
 }
 
+[data-theme="dark"] {
+    --first-color: hsl(353, 100%, 65%);
+    --title-color: #fff;
+    --text-color: #fff;
+    --body-color: #3d3e51;
+    --container-color: #fff;
+    --logo-color: #fff;
+}
+
 
 /*=Responsive typography=*/
 
