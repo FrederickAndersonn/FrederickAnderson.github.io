@@ -1,5 +1,6 @@
 {
-    "name": "https://frederickandersonn.github.io/my-portfolio-website",
+    "homepage": "https://frederickandersonn.github.io/my-portfolio-website",
+    "name": "my-portfolio-website",
     "version": "0.1.0",
     "private": true,
     "dependencies": {
